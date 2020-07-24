@@ -1,16 +1,28 @@
 def div(func):
-    # You have to code here!
-    pass
+    def new_func(*args, **kwargs):
+        content = '<div>'
+        content += func(args)
+        content += '</div>'
+        return content
+    return new_func
 
 
 def article(func):
-    # You have to code here!
-    pass
+    def new_func(*args, **kwargs):
+        content = '<article>'
+        content += func(args)
+        content += '</article>'
+        return content
+    return new_func
 
 
 def p(func):
-    # You have to code here!
-    pass
+    def new_func(*args, **kwargs):
+        content = '<p>'
+        content += func(args)
+        content += '</p>'
+        return content
+    return new_func
 
 
 # Here you must apply the decorators, uncomment this later
